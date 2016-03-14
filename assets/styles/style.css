@@ -16,3 +16,17 @@
 
 	width :40%;
 }
+
+.marg {
+
+	margin-left:-60px !important;
+}
+
+.marg1 {
+
+	margin-left:400px;
+}
+.recherche {
+float : right;
+margin-top: -40px !important;
+}

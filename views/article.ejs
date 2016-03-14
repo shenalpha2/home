@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articles</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Les articles</h1>
+    <ul>
+        <% articles.forEach(function(art){ %>
+            <li>
+                <h2><%= art.titre %></h2>
+                <p><%= art.content %></p>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

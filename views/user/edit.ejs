@@ -1,0 +1,15 @@
+<div class="container">
+
+<form action="/user/update/<%= user.id %>" method="POST" class="form-signin">
+
+<h2> Vous pouvez editez vos users ici </h2>
+
+<input value="<%= user.name %>" name="name" type="text" class="form-control"/><br />
+<input value="<%= user.title %>" name="title" type="text" class="form-control"/><br />
+<input value="<%= user.email %>" name="email" type="text" class="form-control"/><br />
+<input value="Proceed" class="btn btn-lg btn-primary btn-block" type="submit" /><br />
+<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+</form>
+
+</div>

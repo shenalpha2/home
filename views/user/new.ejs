@@ -1,0 +1,54 @@
+
+<div class="containter">
+
+	<% 	if(flash && flash.err) {%>
+	<ul class="alert alert-success">
+	<% Object.keys(flash.err).forEach(function(error) { %>
+	<li><%- JSON.stringify(flash.err[error]) %></li>
+	<% }) %>
+</ul>
+<% } %>
+
+
+
+<form  action="/user/create" method="POST" id ="sign-up-form" class="form-signin form-horizontal">
+	  <div class="form-group">
+    <label for="" class="col-lg-2 control-label">Nom</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" name="name" placeholder="Nom">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-lg-2 control-label">Titre</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" name="title" placeholder="Titre">
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="" class="col-lg-2 control-label">Email</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" name="email" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-lg-2 control-label">Mot de passe</label>
+    <div class="col-sm-3">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">Mot de passe</label>
+    <div class="col-sm-3">
+      <input type="password" class="form-control" name="confirmation" placeholder="Password">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" class="btn btn-primary" value="creer votre compte">
+      <input type="hidden" name="_csrf" value="<% _csrf %>" />
+    </div>
+  </div>
+</form>
+
+</div>

@@ -48,7 +48,7 @@ connection : "someMongodbServer",
 
   },
 
-  beforecreate: function (values, next) {
+  beforeCreate: function (values, next) {
 
     if (!values.password || values.password != values.confirmation) {
       return next({err: ["password doesn't match password confirmation."]});

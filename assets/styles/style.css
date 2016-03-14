@@ -3,11 +3,16 @@
 	width:100%;
 	height:100px;
 	padding:30px;
-	background-color:#e6e6e6;
+	background-color:#fff;
 	margin-bottom:30px !important;
 }
 
 .footer {
 
 	margin-top:200px;
+}
+
+.navlogo {
+
+	width :40%;
 }

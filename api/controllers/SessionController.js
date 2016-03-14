@@ -9,7 +9,7 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
  'new': function(req, res) {
- 	
+
  	res.view('session/new');
  },
 
@@ -17,7 +17,7 @@ module.exports = {
 
  	if (!req.param('email') || !req.param('password')) {
 
- 		var usernamePasswordRequiredError =[{name : 'usernamePasswordRequired', message: 'you must both a user name and password.'}]
+ 		var usernamePasswordRequiredError = [{name : 'usernamePasswordRequired', message: 'you must both a user name and password.'}]
 
  		req.session.flash = {
  			err: usernamePasswordRequiredError
@@ -27,7 +27,7 @@ module.exports = {
  		return;
  	}
 
- 	User.findOnebyEmail(req.param('email'), function foundUser (err, user) {
+ 	User.findOne({email : req.param('email')}, function foundUser (err, user) {
  		if (err) return next(err);
 
  		if (!user) {
@@ -44,7 +44,7 @@ module.exports = {
  			if (err) return next(err);
 
  			if (!valid) {
- 				var usernamePasswordMismatchError = [{name= 'usernamePasswordMismatch', message: 'Invalid username and password combination.'}]
+ 				var usernamePasswordMismatchError = [{name : 'usernamePasswordMismatch', message: 'Invalid username and password combination.'}]
  				req.session.flash = {
  					err: usernamePasswordMismatchError
  				}
@@ -55,7 +55,7 @@ module.exports = {
  			req.session.authenticated = true;
  			req.session.User = user;
 
- 			res.redirect('/user/show' + user.id);
+ 			res.redirect('/user/show/' + user.id);
 
  		});
  	});

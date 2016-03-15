@@ -53,7 +53,7 @@ module.exports = {
  			}
 
  			req.session.authenticated = true;
- 			req.session.User = user;
+			req.session.User = user;
 
  			res.redirect('/user/show/' + user.id);
 

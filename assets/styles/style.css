@@ -20,11 +20,20 @@
 .marg {
 
 	margin-left:-60px !important;
+
+}
+
+.margco {
+	margin-left:-20px !important;
+
+
 }
 
 .marg1 {
+	margin-top: -30px;
+	margin-left:800px;
+	margin-right:800px;
 
-	margin-left:400px;
 }
 .recherche {
 float : right;

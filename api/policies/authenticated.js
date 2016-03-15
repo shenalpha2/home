@@ -3,6 +3,8 @@ module.exports = function (req, res, ok) {
 	
 
 	if (req.session.authenticated) {
+
+		req.session.User = req.user;
 		return ok();
 
 	}
@@ -12,7 +14,7 @@ module.exports = function (req, res, ok) {
 		req.session.flash = {
 		err: requireLoginError
 		}
-		res.redirect('/session/new')
+		res.redirect('/session/new');
 		return;
 	}
 };

@@ -36,7 +36,14 @@ module.exports.policies = {
       edit: "userCanSeeProfile",
       update: "userCanSeeProfile",  
         '*' : "admin"
+    },
+
+    produit: {
+
+      '*' : "userCanSeeProfile",
+      'new' : "userCanSeeProfile"
     }
+
 
    
 

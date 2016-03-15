@@ -37,7 +37,7 @@ th {
 
 .navlogo {
 
-	width :40%;
+	width :50%;
 }
 
 .marg {
@@ -54,6 +54,12 @@ th {
 
 .margcol {
 	margin-left:-70px !important;
+
+
+}
+
+.margcoladmin {
+    margin-left:-80px !important;
 
 
 }

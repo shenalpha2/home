@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hometrade</title>
+
+
+        <link href="/styles/titillium.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jquery-1.12.1.js"></script>
+        <script src="js/caroussel.js"></script>
+
+
+    </head>
+    <body >
+
+        <!-- NAVBAR -->
+
+
+        <ul class="nav navbar-nav" id="navbar1" >
+
+
+            <li class="normal">
+                <a class="nav more" href=""><button class="btn btn-sm btn-danger">Connexion</button></a>
+
+                <ul id="popover">
+                    <li>Email : <input class="" type="text" > </li><br />
+                    <li>Mot de passe : <input class="" type="password" >   </li><br />
+                    <li><button class="btn btn-xs btn-danger"> Valider </div> </li>
+                </ul>
+            </li>
+
+            <li class="normal">
+
+                <ul class="list-unstyled" style="margin-top:15px">
+                    <li><a data-placement="bottom" data-toggle="popoveri" data-container="body" data-placement="left" type="button" data-html="true" href="#" id="login">                <button class="btn btn-sm btn-default">Inscription</button></a>
+                    </a></li>
+            <div id="popover-contenti" class="hide">
+                <form class="form-inline" role="form">
+                    <div class="form-group"> 
+                        <br />
+                        <b >Nom  : </b> <br /><input class="form-control" type="text"><br /><br />
+                        <b >Prénom : </b>  <br /> <input class="form-control" type="text"><br /><br />
+                        <b >Email : </b>  <br /> <input class="form-control" type="text"><br /><br />
+                        <b >Mot de passe : </b>  <br /> <input class="form-control" type="password"><br /><br />
+                        <b >Confirmer Mot de passe : </b>  <br /> <input class="form-control" type="password"><br /><br />
+
+
+                        <button class="btn btn-danger"> Valider </button><br />
+
+                    </div>
+                </form>
+            </div>
+        </ul>
+        </li>
+
+    <li class="normal">
+        <a class="nav " href="# " style="margin-left:px"><button class="btn btn-sm btn-default">Profil</button></a>
+
+    </li>
+    <li class="normal">
+
+        <ul class="list-unstyled" style="margin-top:15px">
+            <li><a data-placement="bottom" data-toggle="popover" data-container="body" data-placement="left" type="button" data-html="true" href="#" id="login">                <button class="btn btn-sm btn-default">Proposer un produit</button></a>
+            </a></li>
+    <div id="popover-content" class="hide">
+        <form class="form-inline" role="form">
+            <div class="form-group"> 
+                <br />
+                <b >Nom du produit : </b> <br /><input class="form-control" type="text"><br /><br />
+                <b >Prix : </b>  <br /> <input class="form-control" type="text"><br /><br />
+                <b >Choisir une catégorie : </b> 
+                <select class="form-control">
+                    <option>  Electroménager  
+                    </option>
+                    <option>  High-tech  
+                    </option>
+                    <option>  Literie  
+                    </option>
+                </select><br /><br />
+                <button class="btn btn-danger"> Valider </button><br />
+
+            </div>
+        </form>
+    </div>
+    </ul>
+</li>
+
+<li class="normal">
+
+    <ul class="list-unstyled" style="margin-top:15px;margin-left:10px">
+        <li><a data-placement="bottom" data-toggle="popovers" data-container="body" data-placement="left" type="button" data-html="true" href="#" id="login">                <button class="btn btn-sm btn-default">Catégorie</button></a>
+        </a></li>
+<div id="popover-contents" class="hide">
+    <form class="form-inline" role="form">
+        <div class="form-group"> 
+            <br /><b>
+            <a href="">Electromenager</a><br />
+            <a href="">High-tech</a><br />
+            <a href="">Literie</a><br />
+            <a href="">Electromenager</a><br />
+            <a href="">Electromenager</a><br />
+            <a href="">Electromenager</a><br /><br />
+
+
+            </div>
+            </form>
+        </div>
+    </ul>
+</li>
+
+
+<div id="image" >
+
+    <a class="nav" href="#num3"><img src="./img/logo.png" style="width:200px;" /></a>
+</div>
+
+</ul>
+
+
+<div class="espace" center >
+ <div>
+
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+
+<div class="container">
+
+	<form class="form-signin">
+		<h1 class="form-signin-heading text-muted">	CONNEXION</h1>
+		<input type="text" class="form-control" placeholder="Identifiant" required="" autofocus="">
+		<input type="password" class="form-control" placeholder="mot de passe" required="">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">
+			Connexion
+		</button>
+	</form>
+
+
+</div>
+
+
+
+
+
+</head>
+<body>
+
+    <div class="footer">
+
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            [].forEach.call(document.querySelectorAll('.more'), function(el) {
+                el.addEventListener('mouseover', function(e) {
+                    if (e.target.nodeName.toLowerCase() == 'a') {
+                        e.preventDefault();
+                    }
+                    document.getElementById('popover').classList.toggle('visible');
+                });
+            });
+        });
+    </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+    <script>
+        var image1 = '<img src="images/image.png"">';
+        $('#popover1').popover({placement: 'bottom', title: '', content: image1, html: true});
+        $('#popover2').popover('show');
+    </script>
+
+    <script>
+
+        $("[data-toggle=popover]").popover({
+            html: true, 
+            content: function() {
+                return $('#popover-content').html();
+            }
+        });
+    </script>
+    <script>
+        $("[data-toggle=popovers]").popover({
+            html: true, 
+            content: function() {
+                return $('#popover-contents').html();
+            }
+        });
+    </script>
+    <script>
+        $("[data-toggle=popoveri]").popover({
+            html: true, 
+            content: function() {
+                return $('#popover-contenti').html();
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>      

@@ -30,6 +30,7 @@ module.exports = {
 			req.session.User = {};
 			req.session.User.id = user.id;
 			req.session.User.name = user.name;
+			req.session.User.admin = user.admin;
 			req.session.User.adresse = user.adresse;
 			res.redirect('/user/show/'+ user.id);
 		});
@@ -74,15 +75,23 @@ module.exports = {
 		});
 	},
 
-	update: function (req, res, next) {
-		User.update(req.param('id'), req.params.all(), function userUpdated (err) {
-			if (err) {
-
-				return res.redirect('/user/edit/' + req.param('id'));
-			}
-			res.redirect('/user/show/' + req.param('id'));
-		});
-	},
+		update: function (req, res, next) {
+		  var data = {
+		     name: req.param("name"),
+		     test: req.param("test"),
+		     adresse: req.param("adresse"),
+		     email: req.param("email"),
+		     admin: req.param("admin") ? true : false,
+		  };
+		  console.log(data);
+		  console.log(req.params.all());
+		  User.update(req.param('id'), data, function userUpdated (err) {
+		   if (err) {
+		    return res.redirect('/user/edit/' + req.param('id'));
+		   }
+		   res.redirect('/user/show/' + req.param('id'));
+		  });
+		},
 
 	destroy: function (req, res, next) {
 

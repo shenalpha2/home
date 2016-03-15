@@ -55,6 +55,7 @@ connection : "someMongodbServer",
 
   },
 
+
   beforeCreate: function (values, next) {
 
     if (!values.password || values.password != values.confirmation) {

@@ -56,7 +56,13 @@ module.exports = {
 			req.session.User = {};
 			req.session.User.id = user.id;
 			req.session.User.name = user.name;
+			req.session.User.admin = user.admin;
 			req.session.User.adresse = user.adresse;
+
+			if ( req.session.User.admin) {
+				res.redirect('/user');
+				return;
+			}
 
  			res.redirect('/user/show/' + user.id);
 

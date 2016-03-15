@@ -25,7 +25,12 @@ module.exports = {
 				return res.redirect('/user/new');
 			}
 			req.session.authenticated = true;
-			req.session.User = user;
+ 			console.log(user)
+ 			req.session.authenticated = true;
+			req.session.User = {};
+			req.session.User.id = user.id;
+			req.session.User.name = user.name;
+			req.session.User.adresse = user.adresse;
 			res.redirect('/user/show/'+ user.id);
 		});
 	},

@@ -56,6 +56,10 @@
           <div class="col-lg-1 margco ">
                     <button class="btn btn-sm btn-default">Produits</button></a>
           </div>
+                      <% } %>                
+
+                    <% if (session.authenticated && session.User.admin )  { %>
+
             <div class="col-lg-1 margco">
                  <a href="/user" >  <button class="btn btn-sm btn-default">Administration</button></a>
 

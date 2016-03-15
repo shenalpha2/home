@@ -19,11 +19,14 @@ connection : "someMongodbServer",
 
   	},
 
-  	title: {
+  	test: {
 
   		type: 'string'
   	},
+    adresse: {
 
+      type: 'string'
+    },
   	email: {
   		type: 'string',
   		email: true,
@@ -31,6 +34,10 @@ connection : "someMongodbServer",
   		unique: true
   	},
 
+    admin: {
+      type: 'boolean',
+      defaultsTo: false
+    },
 
   	encryptedPassword: {
   		type: 'string'
@@ -38,9 +45,9 @@ connection : "someMongodbServer",
 
     toJSON: function() {
       var obj = this.toObject();
-      //delete obj.password;
+      delete obj.password;
       delete obj.confirmation;
-    //  delete obj.encryptedPassword,
+      delete obj.encryptedPassword,
       delete obj._csrf;
       delete obj;
 

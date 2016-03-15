@@ -15,6 +15,10 @@ connection : "someMongodbServer",
         type: 'string',
         required: true,
     },
+        prix: {
+        type: 'string',
+        required: true,
+    },
     description: {
         type: 'text',
         required: true,

@@ -4,7 +4,7 @@ module.exports = function (req, res, ok) {
 
 	if (req.session.authenticated) {
 
-		req.session.User = req.user;
+		/*req.session.User = req.user;*/
 		return ok();
 
 	}

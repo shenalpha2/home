@@ -51,9 +51,12 @@ module.exports = {
  				res.redirect('/session/new');
  				return;
  			}
-
+ 			console.log(user)
  			req.session.authenticated = true;
-			req.session.User = user;
+			req.session.User = {};
+			req.session.User.id = user.id;
+			req.session.User.name = user.name;
+			req.session.User.adresse = user.adresse;
 
  			res.redirect('/user/show/' + user.id);
 

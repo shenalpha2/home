@@ -41,26 +41,26 @@
         <div class="row">
 
           <% if (session.authenticated )  { %>
-          <div class="col-lg-1 margco">
+          <div class="col-lg-1 ">
 
-                <a href="/session/destroy" > <button class="btn btn-sm btn-default">Déconnexion</button></a>
+                <a href="/session/destroy" > <button class="btn btn-sm btn-danger">Déconnexion</button></a>
           </div>
             <div class="col-lg-1 margco">
             <button class="btn btn-sm btn-default">   <a href="/user/show/<%= session.User.id %>"><%= session.User.name  %></a></button>
           </div>
 
-                <div class="col-lg-1 margco">
+                <div class="col-lg-1 margcoll" >
                   <button class="btn btn-sm btn-default">Catégorie</button>
 
           </div>
-          <div class="col-lg-1 margco ">
+          <div class="col-lg-1 margcol ">
                     <button class="btn btn-sm btn-default">Produits</button></a>
           </div>
                       <% } %>                
 
                     <% if (session.authenticated && session.User.admin )  { %>
 
-            <div class="col-lg-1 margco">
+            <div class="col-lg-1 margcol">
                  <a href="/user" >  <button class="btn btn-sm btn-default">Administration</button></a>
 
           </div>
@@ -79,14 +79,12 @@
                               <%  } %>
 
           </div>
-
+          <div class="col-lg-2 "   >
+   </div>
 
           <div class="col-lg-3 marg1">  
                 <a  href="/"><img src="/images/logo.png" class="navlogo" /></a>
           </div>          
-              <div class="col-lg-4 recherche "   ><input class="form-control" type="search" name="query"
-                 placeholder="Recherche"/>
-          </div>
 
 
     </div>

@@ -8,11 +8,15 @@
 module.exports = {
 
   attributes: {
-  	titre: {
+  	name: {
         type: 'string',
         required: true,
     },
-    content: {
+        image: {
+        type: 'string',
+        required: true,
+    },
+    description: {
         type: 'text',
         required: true,
     }

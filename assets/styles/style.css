@@ -1,15 +1,38 @@
+body {
+	width:%;
+}
+
+tr { 
+
+height:100px;
+background-color:#e6e6e6;
+}
+
+td {
+
+	width:300px;
+		padding:20px !important;
+
+}
+th {
+
+	width:300px;
+		padding:20px !important;
+
+}
 .header{
 
 	width:100%;
-	height:100px;
-	padding:30px;
+	height:60px;
+	padding:10px;
 	background-color:#fff;
 	margin-bottom:30px !important;
 }
 
 .footer {
-
+	width:100%;
 	margin-top:200px;
+	bottom:0;
 }
 
 .navlogo {
@@ -24,7 +47,25 @@
 }
 
 .margco {
-	margin-left:-20px !important;
+	margin-left:-50px !important;
+
+
+}
+
+.margcol {
+	margin-left:-70px !important;
+
+
+}
+.margcoll {
+	margin-left:-88px !important;
+
+
+}
+
+
+.margcol2 {
+	margin-left:-90px !important;
 
 
 }
@@ -35,7 +76,145 @@
 	margin-right:800px;
 
 }
-.recherche {
-float : right;
-margin-top: -40px !important;
+
+
+.set {
+
+    margin-top: 50px;
+    background-color: #;
+    height :800px;
+    width : 100%;
+}
+
+.back {
+
+    margin :30px;
+    padding:30px;
+    height :300px;
+    width :500px;
+    background-color: #000;
+    border-radius: 5px 10px 50px 5px;
+    background-image:url(/images/shen4.jpg);
+    border: 5px solid #D5D5D5;
+    font-family: 'Titillium Web', sans-serif;
+    font-size : 22px;
+    color :#fff;
+}
+
+.titrecat {
+
+    border-radius: 10px 10px 10px 10px;
+    margin-top :275px;
+    background-color: #f04f00;
+    padding-left:5px;
+}
+.titrecat2 {
+
+    border-radius: 10px 10px 10px 5px;
+    margin-top :275px;
+    background-color: #f53e33;
+    padding-left:5px;
+
+}
+
+.titrecat5 {
+
+    border-radius: 10px 10px 10px 5px;
+    margin-top :275px;
+    width :65%;
+    background-color: #860101;
+    padding-left:5px;
+
+}
+.titrecat6 {
+
+    border-radius: 10px 10px 10px 5px;
+    margin-top :275px;
+    width :65%;
+    background-color: #000826;
+    padding-left:5px;
+
+}
+.titrecat7 {
+
+    border-radius: 10px 10px 10px 5px;
+    margin-top :275px;
+    width :30%;
+    background-color: #037BCB;
+    padding-left:5px;
+    margin-left:5px;
+
+}
+.back2 {
+
+    margin :30px;
+    padding:30px;
+    height :300px;
+    width :500px;
+    background-color: #000;
+    border-radius: 5px 10px 50px 5px;
+    background-image:url(/images/shen3.jpg);
+    font-family: 'Titillium Web', sans-serif;
+    font-size : 22px;
+    color :#fff;
+    border: 5px solid #D5D5D5;
+
+
+}
+
+
+.back3 {
+
+    margin :30px;
+    padding:30px;
+    height :300px;
+    width :1050px;
+    background-color: #000;
+    border-radius: 5px 10px 50px 5px;
+    background-image:url(/images/shen2.jpg);
+    border: 5px solid #D5D5D5;
+
+
+
+}
+
+.backs {
+
+    margin :30px;
+    padding:30px;
+    height :300px;
+    width :330px;
+    background-color: #000;
+    border-radius: 5px 10px 50px 5px;
+    background-image:url(/images/shen4.jpg);
+    border: 5px solid #D5D5D5;
+    font-family: 'Titillium Web', sans-serif;
+    font-size : 22px;
+    color :#fff;
+}
+
+.set2 {
+
+    margin-top: 50px;
+    background-color: #;
+    height :800px;
+    width : 100%;
+}
+
+
+
+.titrecat3 {
+
+    color :#2D2D2D;
+    font-size: 35px;
+    padding-left : 140px;
+
+}
+
+.titrecat4 {
+
+    color :#2D2D2D;
+    font-size: 15px;
+    padding-left : 140px;
+    
 }

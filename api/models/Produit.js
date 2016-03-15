@@ -1,7 +1,7 @@
 
 module.exports = {
   
-tableName : "Users",
+tableName : "Produits",
 schema: true,
 connection : "someMongodbServer",
 

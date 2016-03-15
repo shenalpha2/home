@@ -1,0 +1,17 @@
+     <div class="container">
+     <table>
+     <tr>
+     	<h1> Liste des produits </h1>
+     </tr>
+        <% produits.forEach(function(pro){ %>
+            <li>
+                <h2><%= pro.name %></h2>
+                <p><%= pro.description %></p>
+                <p><%= pro.image %></p>
+
+
+            </li>
+        <% }); %>
+
+       </table>
+      </div>

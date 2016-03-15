@@ -6,21 +6,49 @@
  */
 
 module.exports = {
-	createArticle: function(req, res) {
-	    Article.create( { titre: req.param('title'), content:  req.param('content') }, function(err,created){
+
+	'new': function ( req, res) {
+		res.view();
+	},
+
+	create: function(req, res) {
+
+	    Produit.create( { name: req.param('name'), description:  req.param('description'), image:  req.param('image') }, function(err,created){
 	    if(!err) {
-	        console.log('Article créé : '+created.titre+', ayant pour ID : '+created.id+'.');
-	    }
+	        console.log('produit créé : '+created.name+', ayant pour ID : '+created.id+'.');
+			return res.redirect('/produit/index/'+ created.id);
+				    
+			
+	    }		        		
+	
 	    else {
 	       return err;
 	    }
 	    });
 	},
-	getArticle: function(req, res) {
-    	Article.find({}, function(err, found){
-        			res.view( 'article', {articles: found} );
-    		});
+	show: function (req, res, next){
+		console.log(req.session)
+		Produit.findOne(req.param('id'), function foundProduit (err, user) {
+			if (err) return next(err); 
+			if (!produit) return next();
+			res.view({
+				produit: produit
+		});
+	});
+  },
+
+ index: function (req, res, next) {
+
+
+ 	Produit.find(function foundProduits (err, produits) {
+ 		if (err) return next(err);
+
+ 		res.view({
+ 			produits: produits
+ 		});
+
+	  });
+	}
+
+
 }
-
-};
-

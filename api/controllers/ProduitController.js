@@ -18,7 +18,6 @@ module.exports = {
 
 	    Produit.create( { name: req.param('name'), description:  req.param('description'), adresse:  req.param('adresse'), prix:  req.param('prix'), user: req.param('user'), categorie: req.param('categorie') }, function(err,created){
 	    if(!err) {
-	        console.log('produit créé : '+created.name+', ayant pour ID : '+created.id+'.');
 			return res.redirect('/produit/index/'+ created.id);
 				    
 			

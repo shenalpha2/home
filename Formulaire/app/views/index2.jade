@@ -1,0 +1,226 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Hometrade
+    link(href='/styles/titillium.css', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', type='text/css', href='css/bootstrap.css')
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    script(src='js/openpage.js')
+    script(src='js/bootstrap.js')
+    script(src='js/jquery-1.12.1.js')
+    script(src='js/caroussel.js')
+  body
+    // NAVBAR
+    ul#navbar1.nav.navbar-nav
+      li.normal
+        a.nav.more(href='')
+          button.btn.btn-sm.btn-danger Connexion
+        ul#popover
+          li
+            | Email : 
+            input(type='text')
+          br
+          li
+            | Mot de passe : 
+            input(type='password')
+          br
+          li
+            button.btn.btn-xs.btn-danger  Valider  
+      li.normal
+        ul.list-unstyled(style='margin-top:15px')
+          li
+            a#login(data-placement='bottom', data-toggle='popoveri', data-container='body', type='button', data-html='true', href='#')
+              button.btn.btn-sm.btn-primary Inscription
+          #popover-contenti.hide
+            form.form-inline(role='form')
+              .form-group
+                br
+                b Nom  : 
+                br
+                input.form-control(name='name', type='text')
+                br
+                br
+                b Prénom : 
+                br
+                input.form-control(name='firstName', type='text')
+                br
+                br
+                b Email : 
+                br
+                input.form-control(name='email', type='text')
+                br
+                br
+                b Mot de passe : 
+                br
+                input.form-control(name='mdp', type='password')
+                br
+                br
+                b Confirmer Mot de passe : 
+                br
+                input.form-control(name='cMdp', type='password')
+                br
+                br
+                button.btn.btn-danger  Valider 
+                br
+      li.normal
+        a.nav(href='# ', style='margin-left:px')
+          button.btn.btn-sm.btn-primary Profil
+      li.normal
+        ul.list-unstyled(style='margin-top:15px')
+          li
+            a#login(data-placement='bottom', data-toggle='popover', data-container='body', type='button', data-html='true', href='#')
+              button.btn.btn-sm.btn-primary Proposer un produit
+          #popover-content.hide
+            form.form-inline(role='form')
+              .form-group
+                br
+                b Nom du produit : 
+                br
+                input.form-control(type='text')
+                br
+                br
+                b Prix : 
+                br
+                input.form-control(type='text')
+                br
+                br
+                b Choisir une catégorie : 
+                select.form-control
+                  option
+                    | Electroménager
+                  option
+                    | High-tech
+                  option
+                    | Literie
+                br
+                br
+                button.btn.btn-danger  Valider 
+                br
+      li.normal
+        ul.list-unstyled(style='margin-top:15px;margin-left:10px')
+          li
+            a#login(data-placement='bottom', data-toggle='popovers', data-container='body', type='button', data-html='true', href='#')
+              button.btn.btn-sm.btn-primary Catégorie
+          #popover-contents.hide
+            form.form-inline(role='form')
+              .form-group
+                br
+                b
+                  a(href='') Electromenager
+                  br
+                  a(href='') High-tech
+                  br
+                  a(href='') Literie
+                  br
+                  a(href='') Electromenager
+                  br
+                  a(href='') Electromenager
+                  br
+                  a(href='') Electromenager
+                  br
+                  br
+      #image
+        a.nav(href='#num3')
+          img(src='./img/logo.png', style='width:200px;')
+    // CAROUSEL
+    #my_carousel.carousel.slide(data-ride='carousel')
+      // Bulles
+      ol.carousel-indicators
+        li.active(data-target='#my_carousel', data-slide-to='0')
+        li(data-target='#my_carousel', data-slide-to='1')
+        li(data-target='#my_carousel', data-slide-to='2')
+      // Slides
+      .carousel-inner
+        // Page 1
+        .item.active
+          .carousel-page
+            .carousel-page
+              img.img-responsive.img-rounded(src='./img/ss2.jpg', style='width:100%;margin-left:0px;height:50%;')
+            .(class='titrecat>')  Une nouvelle façon de voir 
+        // Page 2
+        .item
+          .carousel-page
+            img.img-responsive.img-rounded(src='./img/ss.jpg', style='width:105%;margin-left:0px;')
+        // Page 3
+        .item
+          .carousel-page
+            .carousel-page
+              img.img-responsive.img-rounded(src='./img/ss3.jpg', style='width:105%;margin-left:0px;')
+      // Contrôles
+      a.left.carousel-control(href='#my_carousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href='#my_carousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+    // NAVBAR2
+    .col-lg-12.recherche
+      li.row.rechdans
+        .col-lg-1
+          h4  Recherche :
+        .col-lg-4
+          input.form-control(type='text')
+    .container
+      .row
+        .col-lg-12.titrecat3
+          | Découvrez ce que vos voisins ont de meilleurs à offrir
+        .col-lg-12.titrecat4
+          | Annonces gratuites, annonces immobilier, voiture occasion, auto, moto, Electromenager,  emploi etc... prés de chez vous !
+      .row
+        .col-lg-12.set
+          .row
+            .col-lg-3.back
+              .titrecat  PROPOSEZ UN OBJET A VOTRE VOISIN 
+            .col-lg-2.back2
+              .titrecat2  UN CATALOGUE SANS PRECEDENT 
+            .col-lg-3.back3
+    body
+      .footer
+      script(type='text/javascript').
+        $(document).ready(function() {
+        $('.carousel').carousel({
+        interval: 2000
+        })
+        });
+      script.
+        $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+        });
+      script.
+        document.addEventListener('DOMContentLoaded', function() {
+        [].forEach.call(document.querySelectorAll('.more'), function(el) {
+        el.addEventListener('mouseover', function(e) {
+        if (e.target.nodeName.toLowerCase() == 'a') {
+        e.preventDefault();
+        }
+        document.getElementById('popover').classList.toggle('visible');
+        });
+        });
+        });
+      script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+      // Include all compiled plugins (below), or include individual files as needed
+      script(src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js')
+      script.
+        var image1 = '<img src="images/image.png"">';
+        $('#popover1').popover({placement: 'bottom', title: '', content: image1, html: true});
+        $('#popover2').popover('show');
+      script.
+        $("[data-toggle=popover]").popover({
+        html: true,
+        content: function() {
+        return $('#popover-content').html();
+        }
+        });
+      script.
+        $("[data-toggle=popovers]").popover({
+        html: true,
+        content: function() {
+        return $('#popover-contents').html();
+        }
+        });
+      script.
+        $("[data-toggle=popoveri]").popover({
+        html: true,
+        content: function() {
+        return $('#popover-contenti').html();
+        }
+        });

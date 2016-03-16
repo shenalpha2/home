@@ -2,7 +2,8 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var users = require('./app/routes/users');
+var routes = require('./app/routes/index');
+var vente = require('./app/routes/ventes');
 var app = express();
 
 var mongoose = require('mongoose');
@@ -10,14 +11,19 @@ mongoose.connect('mongodb://127.0.0.1/test',function (err){
 	if (err){throw err;}
 });
 
+app.listen(3000);
 
-app.listen(3306);
+app.set('views', path.join(__dirname, 'app/views'));
+app.set('view engine', 'jade');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/users',users);
+app.use('/', routes);
+app.use('/vente',vente);
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
@@ -35,7 +41,7 @@ if (app.get('env') === 'development') {
       error: err
     });
   });
-}
+}*/
 
 // production error handler
 // no stacktraces leaked to user

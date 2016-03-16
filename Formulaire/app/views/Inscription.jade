@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    title Formulaire
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='css/inscription.css')
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    link(rel='stylesheet', type='text/css', href='css/bootstrap.css')
+    script(src='js/openpage.js')
+  body
+    body(style="font-family: 'Berlin Sans FB';")
+      // NAVBAR
+      ul#navbar1.nav.navbar-nav
+        li.normal
+          a.nav(href='') CONNEXION
+        li.normal
+          a.nav(href='inscription.html') INSCRIPTION
+        li.normal
+          a.nav(href='#num1') PROPOSER UNE CATEGORIE
+        #image
+          a.nav(href='#num3')
+            img(src='source/Sans%20titre-2.png', <='', a='')
+      table#table1
+        tr
+          td
+            label(for='nom') Nom
+          td
+            input#nom(type='text', name='nom', value='')
+            br
+        tr
+          td
+            label(for='prenom') Prenom
+          td
+            input#prenom(type='text', name='prenom', value='')
+            br
+        tr
+          td
+            label(for='pseudo') Pseudo
+          td
+            input#pseudo(type='text', name='pseudo', value='')
+            br
+        tr
+          td
+            label(for='password') Password
+          td
+            input#password(type='password', name='password')
+        tr
+          td
+            label(for='email') Email
+          td
+            input#email(type='email', name='email', value='')
+            br
+        tr
+          td(colspan='2', align='center')
+            input(type='submit', name='valider', value="S'inscrire")

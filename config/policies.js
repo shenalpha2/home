@@ -40,8 +40,8 @@ module.exports.policies = {
 
     produit: {
 
-      '*' : "userCanSeeProfile",
-      'new' : "userCanSeeProfile"
+      '*' : "flash",
+      'new' : "flash"
     }
 
 

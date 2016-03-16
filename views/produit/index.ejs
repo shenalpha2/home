@@ -1,14 +1,22 @@
      <div class="container">
      <table>
      <tr>
-     	<h1> Liste des produits </h1>
+     	<h1 class="titi"> Liste des produits : </h1><br /><br />
      </tr>
         <% produits.forEach(function(pro){ %>
             <li>
-                <h2><%= pro.name %></h2>
-                <p><%= pro.description %></p>
-                <p><%= pro.image %></p>
-                <p><%= pro.prix %></p>
+            <ol class="breadcrumb">
+              <li><a href="#"><h3><%= pro.name %></h3></a></li>
+            </ol>
+                <div class="description"> 
+                    <p><%= pro.description %></p>
+                    <div class="alert alert-info" role="alert">
+                           <p><b>Prix :</b> <%= pro.prix %></p>
+                              <p><b>Utilisateurs :</b> <%= pro.user  %></p>
+                          </div>
+                </div>
+
+             
 
 
             </li>

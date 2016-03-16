@@ -56,6 +56,7 @@ module.exports = {
 			req.session.User = {};
 			req.session.User.id = user.id;
 			req.session.User.name = user.name;
+			req.session.User.email = user.email;
 			req.session.User.admin = user.admin;
 			req.session.User.adresse = user.adresse;
 

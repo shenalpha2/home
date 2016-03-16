@@ -18,11 +18,6 @@ connection : "someMongodbServer",
   		 required: true
 
   	},
-
-  	test: {
-
-  		type: 'string'
-  	},
     adresse: {
 
       type: 'string'

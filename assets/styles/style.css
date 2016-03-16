@@ -118,7 +118,9 @@ th {
     font-size : 22px;
     color :#fff;
 }
-
+.title {
+    margin-left:350px;
+}
 .titrecat {
 
     border-radius: 10px 10px 10px 10px;

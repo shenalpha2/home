@@ -28,8 +28,19 @@ th {
 	padding:10px;
 	background-color:#fff;
 	margin-bottom:30px !important;
+    z-index: 30;
 }
 
+.description {
+    border-radius: 10px 10px 10px 10px;
+
+    height : 250px;
+    width:100%;
+    background-color: #68899A;
+    color:#fff;
+    padding:20px;
+    overflow:auto;
+}
 .footer {
 	width:100%;
 	margin-top:200px;
@@ -54,18 +65,18 @@ th {
 }
 
 .margcol {
-	margin-left:-70px !important;
+	margin-left:-60px !important;
 
 
 }
 
 .margcoladmin {
-    margin-left:-80px !important;
+    margin-left:-70px !important;
 
 
 }
 .margcoll {
-	margin-left:-88px !important;
+	margin-left:-80px !important;
 
 
 }

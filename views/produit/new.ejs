@@ -1,5 +1,5 @@
-
-<div class="containter">
+<div class="backimg">
+<div class="container ">
 
   <%  if(flash && flash.err) {%>
   <ul class="alert alert-success">
@@ -9,9 +9,14 @@
 </ul>
 <% } %>
 
+  <div class="row">
+    <div class="col-lg-2 title2 ">
+     <p> <h4><b>  Publier un produit </b> </p>
+    </div>
+   </div>
 
 <br /><br />
-<form  action="/produit/create" method="POST" class="form-horizontal">
+<form  action="/produit/create" method="POST" class="bloc form-horizontal">
     <div class="form-group">
     <label for="" class="col-lg-2 control-label">Nom</label>
     <div class="col-sm-3">

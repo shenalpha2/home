@@ -125,6 +125,18 @@ th {
 .title {
     margin-left:350px;
 }
+.bloc {
+
+    border-radius: 10px 10px 10px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding:20px;
+    width:100%;
+    height :500px;
+}
+.title2 {
+    margin-left:200px;
+    margin-top:60px;
+}
 .titrecat {
 
     border-radius: 10px 10px 10px 10px;

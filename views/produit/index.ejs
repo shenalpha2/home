@@ -1,13 +1,60 @@
      <div class="container">
      <table>
+             <div class="row " style="margin-top:50px;margin-left:20px";>
+                <div id="filter-panel" class="collapse filter-panel">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <label class="filter-col" style="margin-right:0;" for="pref-perpage">Catégories :</label>
+                                    <select id="pref-perpage" class="form-control">
+                                            <option value="electronique">Electronique</option>
+                                            <option value="electromenager">Electromenager</option>
+                                            <option value="Meuble">Meuble</option>
+                                            <option value="Literie">Literie</option>
+                                            <option value="Jardin">Jardin</option>
+                                            <option value="telephonie">Téléphonie</option>
+                                            <option value="Sports">Sports</option>
+                                            <option value="cuisine">Cuisine</option>
+
+                                    </select>                                
+                                </div> <!-- form group [rows] -->
+                                <div class="form-group">
+                                    <label class="filter-col" style="margin-right:0;" for="pref-search">Rechercher :</label>
+                                    <input type="text" class="form-control input-sm" id="pref-search">
+                                </div><!-- form group [search] -->
+                                <div class="form-group">
+                                    <label class="filter-col" style="margin-right:0;" for="pref-orderby">Choisir l'ordre:</label>
+                                    <select id="pref-orderby" class="form-control">
+                                        <option></option>
+                                    </select>                                
+                                </div> <!-- form group [order by] --> 
+                                <div class="form-group">    
+
+                                    <button type="submit" class="btn btn-default filter-col">
+                                        <span class="glyphicon glyphicon-search"></span> Cherchez
+                                    </button>  
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>    
+
+    </div>
+
      <tr>
-     	<h1 class="titi"> Liste des produits : </h1><br /><br />
+     	<h4><b>  Liste des Offres : </b> 
+
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#filter-panel">
+                    <span class="glyphicon glyphicon-cog"></span> Filtrez
+                </button>
+        </h4><br /><br />
      </tr>
         <% produits.forEach(function(pro){ %>
             <li>
             <ol class="breadcrumb">
 
-              <li><a href="#"><h3><%= pro.name %></h3></a></li>
+              <li><a href="#"><b style="font-size:15px;color:#002132;"><%= pro.name %></b></a></li>
             </ol>
                 <div class="description"> 
                     <p><%= pro.description %></p>

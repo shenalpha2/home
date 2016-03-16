@@ -13,13 +13,17 @@ module.exports = {
 
 	create: function(req, res) {
 
-	    Produit.create( { name: req.param('name'), description:  req.param('description'), image:  req.param('image'), prix:  req.param('prix') }, function(err,created){
+		 function foundUser (err, user) {
+		}
+
+	    Produit.create( { name: req.param('name'), description:  req.param('description'), image:  req.param('adresse'), prix:  req.param('prix'), user: req.param('user') }, function(err,created){
 	    if(!err) {
 	        console.log('produit créé : '+created.name+', ayant pour ID : '+created.id+'.');
 			return res.redirect('/produit/index/'+ created.id);
 				    
 			
-	    }		        		
+	    }	
+
 	
 	    else {
 	       return err;

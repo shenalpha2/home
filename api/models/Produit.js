@@ -11,7 +11,7 @@ connection : "someMongodbServer",
         type: 'string',
         required: true,
     },
-        image: {
+        adresse: {
         type: 'string',
         required: true,
     },
@@ -22,7 +22,11 @@ connection : "someMongodbServer",
     description: {
         type: 'text',
         required: true,
-    }
+    },
+    user: {
+        type: 'text',
+        required: true,
+    },
   }
 };
 

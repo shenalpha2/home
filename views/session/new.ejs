@@ -1,25 +1,32 @@
-<div class="container">
+<div class="backimg">
 
-<form action="/session/create" method="POST" class="form-signin">
-	<h2 class="form-signin-heading">Enregistrez vous</h2><br />
+<div class="container " style="margin-bottom:330px">
 
-	<% if(flash && flash.err) { %>
-	<ul class="alert alert-success">
-	<% Object.keys(flash.err).forEach(function(error) { %>
-	<li><%- JSON.stringify(flash.err[error]) %></li>
-	<% }) %>
-</ul>
-	<% } %>
+	<div class="row ">
+		<div class="col-lg-4 " style="margin-top:150px;">
+			<form action="/session/create" method="POST" class="form-signin">
+				<h3 class="form-signin-heading">Voyez autrement vos voisins.</h3><br />
 
-
-
-<input type="text" class="form-control" placeholder="Email address" name="email"><br />
-<input type="password" class="form-control" placeholder="password" name="password"><br />
-<input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-in"/><br />
-<input type="hidden" name="_csrf" value="<% _csrf %>">
+				<% if(flash && flash.err) { %>
+				<ul class="alert alert-success">
+				<% Object.keys(flash.err).forEach(function(error) { %>
+				<li><%- JSON.stringify(flash.err[error]) %></li>
+				<% }) %>
+			</ul>
+				<% } %>
 
 
 
-</form>
+			<input type="text" class="form-control" placeholder="Email 	" name="email"><br />
+			<input type="password" class="form-control" placeholder="Mot de passe" name="password"><br />
+			<input type="submit" class="btn btn-lg btn-primary btn-block" value="Connectez vous"/><br />
+			<input type="hidden" name="_csrf" value="<% _csrf %>">
+
+
+
+			</form>
+			</div>
+	</div>
 
 </div>
+

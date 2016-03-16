@@ -42,9 +42,13 @@ th {
     overflow:auto;
 }
 .footer {
+    position: relative;
 	width:100%;
-	margin-top:200px;
+    background-color :#e6e6e6;
+    height: 80px;
 	bottom:0;
+    margin-top: 380px !important;
+    color :#878787  ;
 }
 
 .navlogo {
@@ -242,4 +246,22 @@ th {
 
     padding:;
     overflow :auto;
+}
+
+.backimg {
+
+height:100%;
+width:100%;
+background-image:url(/images/wall3.jpg) ;
+z-index: 1;
+color : #fff;
+}
+
+.backimg2 {
+    
+height:100%;
+width:100%;
+background-image:url(/images/wall2.jpg) ;
+z-index: 1;
+color : #fff;
 }

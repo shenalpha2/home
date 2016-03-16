@@ -6,15 +6,24 @@
         <% produits.forEach(function(pro){ %>
             <li>
             <ol class="breadcrumb">
+
               <li><a href="#"><h3><%= pro.name %></h3></a></li>
             </ol>
                 <div class="description"> 
                     <p><%= pro.description %></p>
+                <div class="row">
+                    <div class="col-lg-6">
                     <div class="alert alert-info" role="alert">
                            <p><b>Prix :</b> <%= pro.prix %></p>
                               <p><b>Utilisateur :</b> <%= pro.user  %></p>
-                              <p><b>Adresse :</b> <%= pro.image  %></p>
+                              <p><b>Adresse :</b> <%= pro.adresse  %></p>
+                              <p><b>Catégorie :</b> <%= pro.categorie  %></p>
                           </div>
+                        <div class="col-lg-6">
+                                <img src="/images/shen4.jpg" style="width:200px;height:100px">
+                        </div>
+                          </div>
+                </div>
                 </div>
 
              

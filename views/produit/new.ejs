@@ -10,7 +10,7 @@
 <% } %>
 
 
-
+<br /><br />
 <form  action="/produit/create" method="POST" class="form-horizontal">
     <div class="form-group">
     <label for="" class="col-lg-2 control-label">Nom</label>
@@ -18,17 +18,12 @@
       <input type="text" class="form-control" name="name" placeholder="Nom">
     </div>
   </div>
-  <div class="form-group">
-    <label for="" class="col-lg-2 control-label">Adresse</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="image" placeholder="Adresse">
-    </div>
-  </div>
+
     <div class="form-group">
 
       <label for="" class="col-lg-2 control-label">Description</label>
     <div class="col-sm-3">
-      <input type="text" class="form-control" name="description" placeholder="Description">
+      <textarea type="text" class="form-control" name="description" placeholder="Description"></textarea>
     </div>
   </div>
     <div class="form-group">
@@ -38,7 +33,13 @@
       <input type="text" class="form-control" name="prix" placeholder="Prix">
     </div>
   </div>
+    <div class="form-group">
 
+      <label for="" class="col-lg-2 control-label">Adresse</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" name="adresse" placeholder="Adresse">
+    </div>
+  </div>
    <div class="form-group">
 
       <label for="" class="col-lg-2 control-label">Pseudo </label>
@@ -46,7 +47,22 @@
       <input type="text" class="form-control" name="user" value="<%= session.User.name %>">
     </div>
   </div>
+   <div class="form-group">
 
+      <label for="" class="col-lg-2 control-label" >Catégorie </label>
+    <div class="col-sm-3">
+        <select class="form-control" ng-model="categorie"  name="categorie">
+        <option value="electronique">Electronique</option>
+        <option value="electromenager">Electromenager</option>
+        <option value="Meuble">Meuble</option>
+        <option value="Literie">Literie</option>
+        <option value="Jardin">Jardin</option>
+        <option value="telephonie">Téléphonie</option>
+        <option value="Sports">Sports</option>
+        <option value="cuisine">Cuisine</option>
+      </select>
+    </div>
+  </div><br />
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">

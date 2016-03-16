@@ -23,6 +23,10 @@ connection : "someMongodbServer",
         type: 'text',
         required: true,
     },
+      categorie: {
+        type: 'text',
+        required: true,
+    },
     user: {
         type: 'text',
         required: true,

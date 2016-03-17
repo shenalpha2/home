@@ -29,6 +29,7 @@ module.exports = {
  			req.session.authenticated = true;
 			req.session.User = {};
 			req.session.User.id = user.id;
+			req.session.User.num = user.num;
 			req.session.User.name = user.name;
 			req.session.User.admin = user.admin;
 			req.session.User.adresse = user.adresse;
@@ -81,6 +82,7 @@ module.exports = {
 		     test: req.param("test"),
 		     adresse: req.param("adresse"),
 		     email: req.param("email"),
+				numero: req.param("numero"),
 		     admin: req.param("admin") ? true : false,
 		  };
 		  console.log(data);

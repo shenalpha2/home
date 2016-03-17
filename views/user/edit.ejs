@@ -7,6 +7,8 @@
 <b>Nom: </b><br /><br /><input value="<%= user.name %>" name="name" type="text" class="form-control"/><br />
 <b>Adresse</b> :<br /><br /> <input value="<%= user.adresse %>" name="adresse" type="text" class="form-control"/><br />
 <b>Email :</b><br /><br /> <input value="<%= user.email %>" name="email" type="text" class="form-control"/><br />
+<b>Numero :</b><br /><br /> <input value="<%= user.num %>" name="num" type="text" class="form-control"/><br />
+
 <% if (session.authenticated && session.User.admin) {%>
  <% if (user.admin) { %>
   <label class="checkbox">

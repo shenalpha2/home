@@ -16,7 +16,7 @@ module.exports = {
 		 function foundUser (err, user) {
 		}
 
-	    Produit.create( { name: req.param('name'), description:  req.param('description'), adresse:  req.param('adresse'), prix:  req.param('prix'), user: req.param('user'), categorie: req.param('categorie') }, function(err,created){
+	    Produit.create( { name: req.param('name'), description:  req.param('description'), adresse:  req.param('adresse'), usid:  req.param('usid'), prix:  req.param('prix'), user: req.param('user'), categorie: req.param('categorie') }, function(err,created){
 	    if(!err) {
 			return res.redirect('/produit/index/'+ created.id);
 				    

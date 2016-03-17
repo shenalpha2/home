@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing sessions
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-var bcrypt = require('bcrypt');
+// var bcrypt = require('bcrypt');
 
 module.exports = {
 
@@ -40,23 +40,24 @@ module.exports = {
  		return;
  		}
 
- 		bcrypt.compare(req.param('password'), user.encryptedPassword, function(err, valid) {
- 			if (err) return next(err);
+ 		// bcrypt.compare(req.param('password'), user.encryptedPassword, function(err, valid) {
+ 		// 	if (err) return next(err);
 
- 			if (!valid) {
- 				var usernamePasswordMismatchError = [{name : 'usernamePasswordMismatch', message: 'Invalid username and password combination.'}]
- 				req.session.flash = {
- 					err: usernamePasswordMismatchError
- 				}
- 				res.redirect('/session/new');
- 				return;
- 			}
+ 			// if (!valid) {
+ 			// 	var usernamePasswordMismatchError = [{name : 'usernamePasswordMismatch', message: 'Invalid username and password combination.'}]
+ 			// 	req.session.flash = {
+ 			// 		err: usernamePasswordMismatchError
+ 			// 	}
+ 			// 	res.redirect('/session/new');
+ 			// 	return;
+ 			// }
  			console.log(user)
  			req.session.authenticated = true;
 			req.session.User = {};
 			req.session.User.id = user.id;
 			req.session.User.name = user.name;
 			req.session.User.email = user.email;
+			req.session.User.num = user.num;
 			req.session.User.admin = user.admin;
 			req.session.User.adresse = user.adresse;
 
@@ -67,7 +68,7 @@ module.exports = {
 
  			res.redirect('/user/show/' + user.id);
 
- 		});
+ 		// });
  	});
  },
 

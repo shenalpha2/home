@@ -18,10 +18,17 @@ connection : "someMongodbServer",
   		 required: true
 
   	},
+      num: {
+      type: 'string',
+       required: true
+
+    },
+
     adresse: {
 
       type: 'string'
     },
+
   	email: {
   		type: 'string',
   		email: true,
@@ -33,6 +40,7 @@ connection : "someMongodbServer",
       type: 'boolean',
       defaultsTo: false
     },
+
 
   	encryptedPassword: {
   		type: 'string'
@@ -48,21 +56,21 @@ connection : "someMongodbServer",
 
     }
 
-  },
+  }//,
 
 
-  beforeCreate: function (values, next) {
+  // beforeCreate: function (values, next) {
 
-    if (!values.password || values.password != values.confirmation) {
-      return next({err: ["password doesn't match password confirmation."]});
-    }
+  //   if (!values.password || values.password != values.confirmation) {
+  //     return next({err: ["password doesn't match password confirmation."]});
+  //   }
 
-    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPassword) {
-      if (err) return next(err);
-      values.encryptedPassword = encryptedPassword;
-      //values.online = true;
-      next();
-    });
-  }
+  //   require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPassword) {
+  //     if (err) return next(err);
+  //     values.encryptedPassword = encryptedPassword;
+  //     //values.online = true;
+  //     next();
+  //   });
+  // }
 };
 

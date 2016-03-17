@@ -63,7 +63,9 @@
                            <p><b>Prix :</b> <%= pro.prix %></p>
                               <p><b>Utilisateur :</b> <%= pro.user  %></p>
                               <p><b>Adresse :</b> <%= pro.adresse  %></p>
-                              <p><b>Catégorie :</b> <%= pro.categorie  %></p>
+                              <p><b>Numéro de téléphone :</b> <%= pro.usid  %></p>
+                              <p><b>Catégorie :</b> <%= pro.categorie  %></p><br />
+                              <p><a href="/user/show/<%= session.User.id %>" ><button class="btn btn-primary" >Contacter  </button></a></p>
                           </div>
                         <div class="col-lg-6">
                                 <img src="/images/shen4.jpg" style="width:200px;height:100px">

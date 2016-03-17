@@ -55,8 +55,7 @@ module.exports = {
 
 	recherche: function (req, res, next) {
 
-		if (req.param('categorie') === 'toutes'){
-			Produit.find({name: req.param('name') })
+		Produit.find({ categorie: req.param('categorie'), name: req.param('name'),  prix: req.param('prix') })
 			.exec(function(err, produits) {
 				if(err) res.negotiate(err);
 
@@ -66,25 +65,9 @@ module.exports = {
 					});
 				}
 			})
-		} else {
-
-			Produit.find({name: req.param('name'), categorie: req.param('categorie') })
-			.exec(function(err, produits) {
-				if(err) res.negotiate(err);
-
-				if (produits){
-					res.view('produit/index',{
-						produits: produits
-					});
-				}
-			})
-		}
-
 	},
 
 		categorie: function (req, res, next) {
-
-
 
 		Produit.find({ categorie: req.param('categorie') })
 			.exec(function(err, produits) {

@@ -8,15 +8,15 @@
   <% }) %>
 </ul>
 <% } %>
-
-  <div class="row">
+<div class="bloc">
+  <div class="row ">
     <div class="col-lg-2 title2 ">
      <p> <h4><b>  Publier un produit </b> </p>
     </div>
    </div>
 
 <br /><br />
-<form  action="/produit/create" method="POST" class="bloc form-horizontal">
+<form  action="/produit/create" method="POST" class=" form-horizontal">
     <div class="form-group">
     <label for="" class="col-lg-2 control-label">Nom</label>
     <div class="col-sm-3">
@@ -54,6 +54,13 @@
   </div>
    <div class="form-group">
 
+      <label for="" class="col-lg-2 control-label">Images </label>
+    <div class="col-sm-3">
+      <input type="file" class="form-control" name="image" value="">
+    </div>
+  </div>
+   <div class="form-group">
+
       <label for="" class="col-lg-2 control-label" >Catégorie </label>
     <div class="col-sm-3">
         <select class="form-control" ng-model="categorie"  name="categorie">
@@ -77,4 +84,6 @@
   </div>
 </form>
  
+</div>
+
 </div>

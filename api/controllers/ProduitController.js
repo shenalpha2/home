@@ -51,7 +51,23 @@ module.exports = {
  		});
 
 	  });
-	}
+	},
 
+	recherche: function (req, res, next) {
+// console.log(req.param('categorie'));
+// console.log(req.param('produit'));
+// 		param = req.param('categorie');
+		/*Produit.find({ name : {'contains' : req.param('produit')} })*/
+		Produit.find({ categorie: req.param('categorie'), name: req.param('name'),  prix: req.param('prix') })
+			.exec(function(err, produits) {
+				if(err) res.negotiate(err);
+
+				if (produits){
+					res.view('produit/index',{
+						produits: produits
+					});
+				}
+			})
+	}
 
 }

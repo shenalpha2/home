@@ -128,10 +128,12 @@ th {
 .bloc {
 
     border-radius: 10px 10px 10px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   padding:20px;
+  margin-top:100px;
+  color:#000;
     width:100%;
-    height :500px;
+    height :600px;
 }
 .title2 {
     margin-left:200px;
@@ -156,7 +158,7 @@ th {
 .titrecat5 {
 
     border-radius: 10px 10px 10px 5px;
-    margin-top :275px;
+    margin-top :150px;
     width :65%;
     background-color: #860101;
     padding-left:5px;
@@ -174,7 +176,7 @@ th {
 .titrecat7 {
 
     border-radius: 10px 10px 10px 5px;
-    margin-top :275px;
+    margin-top :150px;
     width :30%;
     background-color: #037BCB;
     padding-left:5px;
@@ -222,7 +224,7 @@ th {
     width :330px;
     background-color: #000;
     border-radius: 5px 10px 50px 5px;
-    background-image:url(/images/shen4.jpg);
+    background-image:url(/images/shen6.jpg);
     border: 5px solid #D5D5D5;
     font-family: 'Titillium Web', sans-serif;
     font-size : 22px;
@@ -264,7 +266,7 @@ th {
 
 height:100%;
 width:100%;
-background-image:url(/images/wall3.jpg) ;
+background-image:url(/images/wall.jpg) ;
 z-index: 1;
 color : #fff;
 }
@@ -276,4 +278,15 @@ width:100%;
 background-image:url(/images/wall2.jpg) ;
 z-index: 1;
 color : #fff;
+}
+
+.imgpro {
+
+    margin-top:-20px;
+    margin-right: -50px;
+    width:250px;
+    height:250px;
+    margin-bottom: -100px;
+    border-radius: 10px 10px 10px 10px;
+
 }

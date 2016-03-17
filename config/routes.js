@@ -37,6 +37,7 @@ module.exports.routes = {
   },
   'get /produit':'ProduitController.index',
   'post /produit/recherche':'ProduitController.recherche',
+  'post /produit/categorie':'ProduitController.categorie',
 
   /***************************************************************************
   *                                                                          *

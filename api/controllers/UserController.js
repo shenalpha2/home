@@ -80,6 +80,7 @@ module.exports = {
 		  var data = {
 		     name: req.param("name"),
 		     test: req.param("test"),
+			     num: req.param("num"),
 		     adresse: req.param("adresse"),
 		     email: req.param("email"),
 				numero: req.param("numero"),

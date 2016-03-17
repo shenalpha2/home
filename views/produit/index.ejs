@@ -53,19 +53,19 @@
             <li>
             <ol class="breadcrumb">
 
-              <li><a href="#"><b style="font-size:15px;color:#002132;"><%= pro.name %></b></a></li>
+              <li><a href="#"><b style="font-size:19px;color:#920000;"><%= pro.name %></b></a></li>
             </ol>
                 <div class="description"> 
                     <p><%= pro.description %></p>
                 <div class="row">
                     <div class="col-lg-6">
-                    <div class="alert alert-info" role="alert">
+                    <div class="alert alert-warning" role="alert">
                            <p><b>Prix :</b> <%= pro.prix %></p>
                               <p><b>Utilisateur :</b> <%= pro.user  %></p>
                               <p><b>Adresse :</b> <%= pro.adresse  %></p>
                               <p><b>Numéro de téléphone :</b> <%= pro.usid  %></p>
                               <p><b>Catégorie :</b> <%= pro.categorie  %></p><br />
-                              <p><a href="/user/show/<%= session.User.id %>" ><button class="btn btn-primary" >Contacter  </button></a></p>
+                              <p><a href="/user/show/<%= session.User.id %>" ><button class="btn btn-danger" >Contacter  </button></a></p>
                           </div>
                         <div class="col-lg-6">
                                 <img src="/images/shen4.jpg" style="width:200px;height:100px">

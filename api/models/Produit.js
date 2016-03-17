@@ -34,12 +34,7 @@ connection : "someMongodbServer",
         usid: {
         type: 'string',
         required: true,
-    },
-            usod: {
-        type: 'string',
-        required: true,
     }
-    
     
 
   }

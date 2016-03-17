@@ -62,7 +62,7 @@ module.exports = {
 			req.session.User.adresse = user.adresse;
 
 			if ( req.session.User.admin) {
-				res.redirect('/user');
+				res.redirect('/');
 				return;
 			}
 

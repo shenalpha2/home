@@ -201,6 +201,14 @@ th {
 
 }
 
+.user {
+    border-radius: 10px 10px 10px 10px;
+
+    width :300px;
+    height :100px;
+    margin:10px;
+    background-color: #000;
+}
 
 .back3 {
 
@@ -208,10 +216,11 @@ th {
     padding:30px;
     height :300px;
     width :1050px;
+    color :#fff;
     background-color: #000;
     border-radius: 5px 10px 50px 5px;
-    background-image:url(/images/shen2.jpg);
     border: 5px solid #D5D5D5;
+    background-image:url(/images/lo.jpg);
 
 
 
@@ -287,6 +296,17 @@ color : #fff;
     margin-right: -50px;
     width:250px;
     height:250px;
+    margin-bottom: -100px;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+.imgpro2 {
+
+    margin-top:-20px;
+    margin-right: -50px;
+    width:150px;
+    height:100px;
     margin-bottom: -100px;
     border-radius: 10px 10px 10px 10px;
 

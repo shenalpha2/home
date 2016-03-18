@@ -1,0 +1,15 @@
+@media (max-width: 625px)
+{
+    #my_carousel {
+         visibility: hidden;
+        
+    }
+}
+
+
+@media (max-width: 768px)
+{
+    .nav{
+        visibility: hidden;
+    }
+}
